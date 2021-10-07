@@ -56,8 +56,6 @@ def display_simulated_ef_with_random(dataframe, num_portfolios, risk_free_rate):
     min_vol_returns, min_vol, min_vol_sharpe = pf.stats(verbose=False)
 
     min_vol_allocation = pd.DataFrame.from_dict(min_vol_allocation, orient='index', columns=['allocation']).T
-    # min_vol_allocation.allocation = [round(i*100, 2)for i in min_vol_allocation.allocation]
-    # min_vol_allocation = min_vol_allocation.T
 
     print("-"*80)
     print("Maximum Sharpe Ratio Portfolio Allocation\n")
