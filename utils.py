@@ -90,4 +90,4 @@ def backtest(dataframe, weights):
     portfolio = (dataframe * weights).sum(axis=1)
     portfolio = 1000 * (portfolio / portfolio.iloc[0])
 
-    portfolio.plot(title='Portfolio performance')
+    return portfolio
