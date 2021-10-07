@@ -83,3 +83,11 @@ def display_simulated_ef_with_random(dataframe, num_portfolios, risk_free_rate):
     plt.xlabel('annualised volatility')
     plt.ylabel('annualised returns')
     plt.legend(labelspacing=0.8)
+
+
+def backtest(dataframe, weights):
+
+    portfolio = (dataframe * weights).sum(axis=1)
+    portfolio = 1000 * (portfolio / portfolio.iloc[0])
+
+    portfolio.plot(title='Portfolio performance')
